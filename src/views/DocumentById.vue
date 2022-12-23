@@ -10,6 +10,7 @@
         <input-field :label="n.field_name" :type="n.field_type === 1 ? 'text' : 'number'" />
       </template>
     </div>
+    <button @click="$router.back()" class="base-button">Back</button>
   </div>
 </template>
 
@@ -20,6 +21,8 @@ import { useRoute } from "vue-router";
 
 import InputField from "@/components/UI/InputField.vue";
 import SelectField from "@/components/UI/SelectField.vue";
+import UiButton from "@/components/UI/UiButton.vue";
+
 import { IDocumentDetailField } from "@/models";
 
 const document_title = ref('')
